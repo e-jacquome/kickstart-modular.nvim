@@ -32,7 +32,24 @@ return {
         }
       end,
       formatters_by_ft = {
-        lua = { 'stylua' },
+        lua = { 'stylua', stop_after_first = true },
+        python = { 'black' },
+        rust = { 'rustfmt' },
+        javascript = { 'prettier', stop_after_first = true },
+        javascriptreact = { 'prettier', stop_after_first = true },
+        typescript = { 'prettier', stop_after_first = true },
+        typescriptreact = { 'prettier', stop_after_first = true },
+        go = { 'gofumpt', 'golines', 'goimports-reviser' },
+        c = { 'clang_format' },
+        cpp = { 'clang_format' },
+        haskell = { 'ormolu' },
+        yaml = { 'yamlfmt' },
+        html = { 'prettier' },
+        json = { 'prettier' },
+        markdown = { 'prettier' },
+        gleam = { 'gleam' },
+        asm = { 'asmfmt' },
+        css = { 'prettier', stop_after_first = true },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --

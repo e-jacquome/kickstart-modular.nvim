@@ -49,7 +49,20 @@ return {
           end,
         },
         completion = { completeopt = 'menu,menuone,noinsert' },
+        formatting = {
+          fields = { 'menu', 'abbr', 'kind' },
+          format = function(entry, item)
+            local menu_icon = {
+              nvim_lsp = 'λ',
+              luasnip = '⋗',
+              buffer = 'Ω',
+              path = '🖫',
+            }
 
+            item.menu = menu_icon[entry.source.name]
+            return item
+          end,
+        },
         -- For an understanding of why these mappings were
         -- chosen, you will need to read `:help ins-completion`
         --
@@ -60,6 +73,11 @@ return {
           -- ['<C-n>'] = cmp.mapping.select_next_item(),
           -- -- Select the [p]revious item
           -- ['<C-p>'] = cmp.mapping.select_prev_item(),
+
+          -- Select the [n]ext item
+          -- ['<C-j>'] = cmp.mapping.select_next_item(),
+          -- Select the [p]revious item
+          -- ['<C-k>'] = cmp.mapping.select_prev_item(),
 
           -- Select the [n]ext item
           ['<C-j>'] = cmp.mapping.select_next_item(),

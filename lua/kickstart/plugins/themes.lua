@@ -1,21 +1,15 @@
 return {
   {
-    'blazkowolf/gruber-darker.nvim',
-    opts = {
-      bold = false,
-    },
-  },
-  {
     'zenbones-theme/zenbones.nvim',
     dependencies = 'rktjmp/lush.nvim',
     lazy = false,
     priority = 1000,
   },
   { 'ellisonleao/gruvbox.nvim' },
-  {
-    'rose-pine/neovim',
-    name = 'rose-pine',
-  },
+  -- {
+  --   'rose-pine/neovim',
+  --   name = 'rose-pine',
+  -- },
   {
     'tjdevries/colorbuddy.nvim',
   },

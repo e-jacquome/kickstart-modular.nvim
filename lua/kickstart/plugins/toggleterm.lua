@@ -57,7 +57,7 @@ return {
             numbers[i] = i
           end
 
-          toggle_set(numbers, 30, vim.loop.cwd(), 'horizontal')
+          toggle_set(numbers, 20, vim.loop.cwd(), 'horizontal')
         end,
         desc = 'ToggleTerm (all)',
       },
